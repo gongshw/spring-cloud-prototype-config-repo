@@ -2,7 +2,7 @@ zuul:
   ignoredServices: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
-    demo1-app: /demo1/**
+    demo1: /demo1/**
     demo2: /demo2/**
     auth-server:
       path: /oauth/token
