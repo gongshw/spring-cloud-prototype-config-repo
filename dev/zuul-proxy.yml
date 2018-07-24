@@ -1,8 +1,19 @@
 zuul:
   ignoredServices: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
     demo1: /demo1/**
     demo2: /demo2/**
+    auth-server:
+      path: /oauth/token
+      stripPrefix: false
+
   host:
     socket-timeout-millis: 15000
     connect-timeout-millis: 30000
+
+base:
+  auth:
+    excludes:
+      - /oauth/**
+
