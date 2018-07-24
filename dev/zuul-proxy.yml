@@ -10,3 +10,9 @@ zuul:
   host:
     socket-timeout-millis: 15000
     connect-timeout-millis: 30000
+
+base:
+  auth:
+    excludes:
+      - /oauth/**
+
